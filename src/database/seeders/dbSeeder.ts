@@ -1,5 +1,7 @@
-import { UserFactory } from "../factories/UserFactory";
+import { RoleSeeder } from "./RoleSeeder";
 
-const users = new UserFactory().createMany(4);
+(async () => {
+  console.log("Starting seeder...");
 
-console.log(users);
+  await new RoleSeeder().start();
+})();
