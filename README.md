@@ -22,11 +22,10 @@ Crear un sistema de gestión de citas para un estudio de tatuajes.
 
 ## Sobre el proyecto-🔎
 
-El cliente deberá ser capaz de registrarse en la aplicación, hacer
-login y acceder a su área de cliente, todo ello visualmente desde el navegador.
-su área de cliente deberá poder ver una lista de las citas para sesiones de tattoo /
-piercing que tiene a futuro, podrá crear citas con tatuadores y cada tatuador tendrá
-un portfolio de tatuajes(galeria?), modificarlas y anularlas.
+El cliente deberá ser capaz de registrarse en la aplicación, hacer login y acceder a su área de cliente, todo ello visualmente desde el navegador.
+citas: modificarlas y anularlas.
+Podrá crear citas con tatuadores y cada tatuador tendrá
+un portfolio de tatuajes,
 
 También existirá una zona de usuario con sus datos personales, que solo
 podrá ver él mismo.
@@ -37,8 +36,8 @@ MySQL ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-ba
 
 JavaScript ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-🛠️ Node JS, TypeORM, Javascript, API REST
-Docker, MySQL , ES6 / TS, funcionalidad de async/await
+🛠️ Node JS, TypeORM, ES6 Javascript, API REST
+Docker, MySQL , TS, funcionalidad de async/await
 
 ## Diagrama BD
 
@@ -46,13 +45,13 @@ Docker, MySQL , ES6 / TS, funcionalidad de async/await
 
 Registro de usuarios
 
-● Login de usuarios.
+● Login de usuarios
 
-● Perfil de usuario.
+● Perfil de usuario
 
-● Modificación de datos del perfil.
+● Modificación de datos del perfil
 
-● Creación de citas.
+● Creación de citas
 
 ● Editar citas
 
