@@ -1,0 +1,18 @@
+import { faker } from "@faker-js/faker";
+import { Service } from "../../models/Service";
+import { Factory } from "./Factory";
+
+export class ServiceFactory extends Factory<Service> {
+  protected generate(): Service {
+    return {
+      serviceName: faker.helpers.arrayElement([
+        "Tatuador1 Tatuajes 1",
+        "Tatuador2 Tatuajes 2",
+        "Tatuador3 Tatuajes 3",
+        "Tatuador4 Tatuajes 4",
+        "Tatuador5 Tatuajes 5",
+      ]),
+      description: faker.lorem.sentence({ min: 2, max: 6 }),
+    } as Service;
+  }
+}
