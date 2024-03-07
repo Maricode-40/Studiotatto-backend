@@ -73,6 +73,8 @@ Para desarrollar este proyecto puedes consultar en:
 
 <a href="https://jwt.io/" target="_blank"> Documentación Json Web Token</a>
 
+<a href="https://fakerjs.dev/" target="_blank"> Faker Data Generator </a>
+
 ## Contact 👩🏽‍💻
 
 <a href="https://www.linkedin.com/in/marissarico" target="_blank"> <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
