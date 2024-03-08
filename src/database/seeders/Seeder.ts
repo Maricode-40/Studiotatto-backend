@@ -9,10 +9,10 @@ export abstract class Seeder {
       await this.generate();
 
       const seederName = this.constructor.name;
-      console.log(`${seederName}--> DONE`);
+      console.log(`${seederName} --> DONE`);
     } catch (error) {
       console.error(error);
-    } finally {
+    } finally { 
       await dataSource.destroy();
     }
   }
