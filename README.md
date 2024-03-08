@@ -10,9 +10,10 @@
   <li><a href="#sobre-el-proyecto-🔎">Sobre el proyecto</a></li>
   <li><a href="#Stack-🚀">Stack</a></li>
   <li><a href="#Diagrama">Diagrama</a></li>
-  <li><a href="#Licencia">Licence</a></li>
+  <li><a href="#Licencia">Licencia</a></li>
+  <li><a href="#Instalacion">Instalación</a></li>
   <li><a href="#Webgrafia">Webgrafia</a></li>
-  <li><a href="#Contacto">Contact</a></li>
+  <li><a href="#Contacto">Contact0</a></li>
   </ol>
 </details>
 
@@ -64,6 +65,17 @@ Registro de usuarios
 ● Listar tatuadores
 
 ## Licencia
+
+## Instalación
+
+Sigue estos pasos para instalar y ejecutar el proyecto localmente:
+
+1.  Clona este repositorio: `git clone`
+2.  Instala las dependencias: `npm install`
+4.  Inicia la aplicación: `npm start`
+5.  Instala dependencias `package json` `gitgnore`
+y modulos node: `node modules`
+
 
 ## Webgrafia:
 
