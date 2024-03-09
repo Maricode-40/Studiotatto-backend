@@ -66,6 +66,55 @@ Registro de usuarios
 
 ## Licencia
 
+# Endpoints principales
+
+### Users
+
+| Método | URI                                  | Acción                 | Rol     |
+|--------|--------------------------------------|------------------------|---------|
+| GET    | `/api/users/profile`                 | Detalles del perfil    | user    |
+| PUT    | `/api/users/profile`                 | Actualiza perfil       | user    |
+| GET    | `/api/users/appointments`            | Obtener mis citas      | user    |
+| GET    | `/api/users/services`                | Obtener servicios      | user    |
+| POST   | `/api/users/appointments`            | Agregar citas          | user    |
+| DELETE | `/api/users/service /{serviceId}`    | Eliminar mi favorito   | user    |
+| POST   | `/api/users`                         | Nuevo usuario          | admin   |
+| GET    | `/api/users`                         | Lista de usuarios      | admin   |
+| GET    | `/api/users/{id}`                    | Detalles de usuario    | admin   |
+| PUT    | `/api/users/{id}`                    | Actualiza usuario      | admin   |
+| DELETE | `/api/users/{id}`                    | Elimina usuario        | admin   |
+| GET    | `/api/users/{id}/appointments`       | Citas por usuario      | admin   |
+| PUT    | `/api/users/{id}/role`               | Cambiar rol            | admin   |
+
+### SERVICES
+
+| Método | URI                | Acción             | Rol   |
+|--------|--------------------|--------------------|-------|
+| GET    | `/api/service`     | Lista de servicios | -     |
+| POST   | `/api/service`     | Nuevo servicio     | admin |
+| GET    | `/api/tatuador/{id}`| Detalles tatuador | -     |
+| PUT    | `/api/tatuador/{id}`| Actualiza tatuador| admin |
+| DELETE | `/api/tatuador/{id}`| Elimina tatuador  | admin |
+
+### APPOINTMENTS
+
+| Método | URI                    | Acción           | Rol   |
+|--------|----------------------  |------------------|-------|
+| GET    | `/api/appointment`     | Lista de citas   | -     |
+| POST   | `/api/appointment`     | Nueva cita       | admin |
+| GET    | `/api/appoitnment/{id}`| Detalles citas   | -     |
+| PUT    | `/api/appointment/{id}`| Actualiza cita   | admin |
+| DELETE | `/api/appointment/{id}`| Elimina cita     | admin |
+
+
+### Autenticación
+
+| Método | URI                      | Acción                    |
+|--------|--------------------------|---------------------------|
+| POST   | `/api/auth/register`     | Registra un nuevo usuario |
+| POST   | `/api/auth/login`        | Iniciar sesión.           |
+
+
 ## Instalación
 
 Sigue estos pasos para instalar y ejecutar el proyecto localmente:
