@@ -6,12 +6,12 @@ import { Seeder } from "./Seeder";
 
 export class UserSeeder extends Seeder {
   protected async generate(): Promise<void> {
-    const { SUPERADMIN, TATUADOR, CLIENT } = SeederConfig;
+    const { SUPERADMIN, TATUADOR, CLIENTS } = SeederConfig;
 
     const userFactory = new UserFactory();
 
-    const adminUsers = userFactory.createMany(SUPERADMIN);
-    adminUsers.forEach((user) => {
+    const superadminUsers = userFactory.createMany(SUPERADMIN);
+    superadminUsers.forEach((user) => {
       user.role = UserRoles.SUPERADMIN;
     });
 
@@ -20,12 +20,12 @@ export class UserSeeder extends Seeder {
       user.role = UserRoles.TATUADOR;
     });
 
-    const clientUsers = userFactory.createMany(CLIENT);
+    const clientUsers = userFactory.createMany(CLIENTS);
     clientUsers.forEach((user) => {
       user.role = UserRoles.CLIENT;
     });
 
-    const allUsers = [...adminUsers, ...tatuadorUsers, ...clientUsers];
+    const allUsers = [...superadminUsers, ...tatuadorUsers, ...clientUsers];
     await User.save(allUsers);
   }
 }

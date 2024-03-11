@@ -1,4 +1,5 @@
 import { MigrationInterface, QueryRunner, Table, TableUnique } from "typeorm";
+import { Appointment } from "../../models/Appointment";
 
 export class CreateAppointmentsTable1709720870691
   implements MigrationInterface
@@ -42,8 +43,8 @@ export class CreateAppointmentsTable1709720870691
         ],
         uniques: [
           new TableUnique({
-            name: "user_service_unique",
-            columnNames: ["user_id", "service_id"],
+            name: "user_service_date_unique",
+            columnNames: ["user_id", "service_id", "appointment_date"],
           }),
         ],
       }),

@@ -19,7 +19,7 @@ export class Appointment extends BaseEntity {
 
   @ManyToOne(() => Service, (service) => service.appointments)
   @JoinColumn({ name: "service_id" })
-  services!: Service[];
+  service!: Service;
 
   @ManyToOne(() => User, (user) => user.appointments)
   @JoinColumn({ name: "user_id" })

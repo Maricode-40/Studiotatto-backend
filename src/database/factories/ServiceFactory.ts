@@ -6,9 +6,9 @@ export class ServiceFactory extends Factory<Service> {
   protected generate(): Service {
     return {
       serviceName: faker.helpers.arrayElement([
-        "Tatuador1 Tatuajes 1",
-        "Tatuador2 Tatuajes 2",
-        "Tatuador3 Tatuajes 3",
+        "Tatuador1",
+        "Tatuador2",
+        "Tatuador3",
       ]),
       description: faker.lorem.sentence({ min: 2, max: 7 }),
     } as Service;
