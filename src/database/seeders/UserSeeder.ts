@@ -11,13 +11,15 @@ export class UserSeeder extends Seeder {
     const userFactory = new UserFactory();
 
     const superadminUsers = userFactory.createMany(SUPERADMIN);
-    superadminUsers.forEach((user) => {
+    superadminUsers.forEach((user, i) => {
       user.role = UserRoles.SUPERADMIN;
+      user.email = `superadmin${i + 1}@superadmin.com`;
     });
 
     const tatuadorUsers = userFactory.createMany(TATUADOR);
-    tatuadorUsers.forEach((user) => {
+    tatuadorUsers.forEach((user, i) => {
       user.role = UserRoles.TATUADOR;
+      user.email = `tatuador${i + 1}@tatuador.com`;
     });
 
     const clientUsers = userFactory.createMany(CLIENTS);

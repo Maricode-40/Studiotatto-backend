@@ -10,7 +10,7 @@ export class ServiceFactory extends Factory<Service> {
         "Tatuador2",
         "Tatuador3",
       ]),
-      description: faker.lorem.sentence({ min: 2, max: 7 }),
+      description: faker.lorem.sentence({ min: 3, max: 10 }),
     } as Service;
   }
 }

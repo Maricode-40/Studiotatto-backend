@@ -16,7 +16,9 @@ export class AppointmentSeeder extends Seeder {
       { appointmentDate: new Date("2024-10-15") },
       { appointmentDate: new Date("2024-10-16") },
       { appointmentDate: new Date("2024-10-17") },
-      { appointmentDate: new Date("2024-10-17") },
+      { appointmentDate: new Date("2024-10-18") },
+      { appointmentDate: new Date("2024-10-19") },
+      { appointmentDate: new Date("2024-10-20") },
     ];
 
     appointments.forEach((appointment) => {
