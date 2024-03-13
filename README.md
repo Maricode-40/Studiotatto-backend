@@ -70,50 +70,49 @@ Registro de usuarios
 
 ### Users
 
-| Método | URI                                  | Acción                 | Rol     |
-|--------|--------------------------------------|------------------------|---------|
-| GET    | `/api/users/profile`                 | Detalles del perfil    | user    |
-| PUT    | `/api/users/profile`                 | Actualiza perfil       | user    |
-| GET    | `/api/users/appointments`            | Obtener mis citas      | user    |
-| GET    | `/api/users/services`                | Obtener servicios      | user    |
-| POST   | `/api/users/appointments`            | Agregar citas          | user    |
-| DELETE | `/api/users/service /{serviceId}`    | Eliminar mi favorito   | user    |
-| POST   | `/api/users`                         | Nuevo usuario          | admin   |
-| GET    | `/api/users`                         | Lista de usuarios      | admin   |
-| GET    | `/api/users/{id}`                    | Detalles de usuario    | admin   |
-| PUT    | `/api/users/{id}`                    | Actualiza usuario      | admin   |
-| DELETE | `/api/users/{id}`                    | Elimina usuario        | admin   |
-| GET    | `/api/users/{id}/appointments`       | Citas por usuario      | admin   |
-| PUT    | `/api/users/{id}/role`               | Cambiar rol            | admin   |
+| Método | URI                                        | Acción               | Rol   |
+| ------ | ------------------------------------------ | -------------------- | ----- |
+| GET    | `/api/users/profile`                       | Detalles del perfil  | user  |
+| PUT    | `/api/users/profile`                       | Actualiza perfil     | user  |
+| GET    | `/api/users/appointments`                  | Obtener mis citas    | user  |
+| GET    | `/api/users/services`                      | Obtener servicios    | user  |
+| POST   | `/api/users/appointments`                  | Agregar citas        | user  |
+| DELETE | `/api/users/service/{serviceId}`           | Eliminar mi servicio | user  |
+| DELETE | `/api/users/appointments/{appointmentsId}` | Eliminar mi cita     | user  |
+| POST   | `/api/users`                               | Nuevo usuario        | admin |
+| GET    | `/api/users`                               | Lista de usuarios    | admin |
+| GET    | `/api/users/{id}`                          | Detalles de usuario  | admin |
+| PUT    | `/api/users/{id}`                          | Actualiza usuario    | admin |
+| DELETE | `/api/users/{id}`                          | Elimina usuario      | admin |
+| GET    | `/api/users/{id}/appointments`             | Citas por usuario    | admin |
+| PUT    | `/api/users/{id}/role`                     | Cambiar rol          | admin |
 
 ### SERVICES
 
-| Método | URI                | Acción             | Rol   |
-|--------|--------------------|--------------------|-------|
-| GET    | `/api/service`     | Lista de servicios | -     |
-| POST   | `/api/service`     | Nuevo servicio     | admin |
-| GET    | `/api/tatuador/{id}`| Detalles tatuador | -     |
-| PUT    | `/api/tatuador/{id}`| Actualiza tatuador| admin |
-| DELETE | `/api/tatuador/{id}`| Elimina tatuador  | admin |
+| Método | URI                  | Acción             | Rol   |
+| ------ | -------------------- | ------------------ | ----- |
+| GET    | `/api/service`       | Lista de servicios | -     |
+| POST   | `/api/service`       | Nuevo servicio     | admin |
+| GET    | `/api/tatuador/{id}` | Detalles tatuador  | -     |
+| PUT    | `/api/tatuador/{id}` | Actualiza tatuador | admin |
+| DELETE | `/api/tatuador/{id}` | Elimina tatuador   | admin |
 
 ### APPOINTMENTS
 
-| Método | URI                    | Acción           | Rol   |
-|--------|----------------------  |------------------|-------|
-| GET    | `/api/appointment`     | Lista de citas   | -     |
-| POST   | `/api/appointment`     | Nueva cita       | admin |
-| GET    | `/api/appoitnment/{id}`| Detalles citas   | -     |
-| PUT    | `/api/appointment/{id}`| Actualiza cita   | admin |
-| DELETE | `/api/appointment/{id}`| Elimina cita     | admin |
-
+| Método | URI                     | Acción         | Rol   |
+| ------ | ----------------------- | -------------- | ----- |
+| GET    | `/api/appointment`      | Lista de citas | -     |
+| POST   | `/api/appointment`      | Nueva cita     | admin |
+| GET    | `/api/appoitnment/{id}` | Detalles citas | -     |
+| PUT    | `/api/appointment/{id}` | Actualiza cita | admin |
+| DELETE | `/api/appointment/{id}` | Elimina cita   | admin |
 
 ### Autenticación
 
-| Método | URI                      | Acción                    |
-|--------|--------------------------|---------------------------|
-| POST   | `/api/auth/register`     | Registra un nuevo usuario |
-| POST   | `/api/auth/login`        | Iniciar sesión.           |
-
+| Método | URI                  | Acción                    |
+| ------ | -------------------- | ------------------------- |
+| POST   | `/api/auth/register` | Registra un nuevo usuario |
+| POST   | `/api/auth/login`    | Iniciar sesión.           |
 
 ## Instalación
 
@@ -121,10 +120,9 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 
 1.  Clona este repositorio: `git clone`
 2.  Instala las dependencias: `npm install`
-4.  Inicia la aplicación: `npm start`
-5.  Instala dependencias `package json` `gitgnore`
-y modulos node: `node modules`
-
+3.  Inicia la aplicación: `npm start`
+4.  Instala dependencias `package json` `gitgnore`
+    y modulos node: `node modules`
 
 ## Webgrafia:
 
