@@ -37,12 +37,19 @@ MySQL ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-ba
 
 JavaScript ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-🛠️ Node JS, TypeORM, ES6 Javascript, API REST
+🛠️ TypeORM, ES6 Javascript, API REST
 Docker, MySQL , TS, funcionalidad de async/await
+
+<a href="https://www.expressjs.com/">
+    <img src= "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"/>
+</a>
+<a href="https://nodejs.org/es/">
+    <img src= "https://img.shields.io/badge/node.js-026E00?style=for-the-badge&logo=node.js&logoColor=white"/>
+</a>
 
 ## Diagrama BD
 
-<img src="./img/Diagrama BD.png" alt="DB" />
+<img src="./img/newDiagramDB.png" alt="DB" />
 
 Registro de usuarios
 
@@ -60,15 +67,53 @@ Registro de usuarios
 
 ● Ver todas las citas que tengo como cliente (solo las propias)
 
-● Ver todas las citas existentes conmigo (role tatuador).
+● Ver todas las citas existentes (role tatuador).
 
 ● Listar tatuadores
 
 ## Licencia
 
+Este proyecto se encuentra bajo licencia de "Mi Nombre"
+
 # Endpoints principales
 
-### Users
+- AUTH
+
+  - REGISTER
+
+          POST http://localhost:
+
+    body:
+
+    ```js
+        {
+            "user": "David",
+            "email": "david@david.com",
+            "password": "princes"
+        }
+    ```
+
+  - LOGIN
+
+          POST
+
+    body:
+
+    ```js
+        {
+            "user": "David",
+            "email": "david@david.com",
+            "password": "princes"
+        }
+    ```
+
+- - RECUPERAR RU
+
+          GET
+
+  - ...
+
+### Users (esto remover al fin de semana)
 
 | Método | URI                                        | Acción               | Rol   |
 | ------ | ------------------------------------------ | -------------------- | ----- |
