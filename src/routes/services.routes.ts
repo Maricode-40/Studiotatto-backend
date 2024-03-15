@@ -4,24 +4,24 @@ const router = express.Router();
 
 //  Public routes
 router.get("/", (req, res) => {
-  res.send("get appointment list");
+  res.send("get Service List");
 });
 
 router.get("/:id", (req, res) => {
-  res.send("get details of appointment date");
+  res.send("Details of Services");
 });
 
 //protected routes
 
 router.post("/", (req, res) => {
-  res.send("New appointment");
+  res.send("New Services");
 });
 
 router.put("/:id", (req, res) => {
-  res.send("update appointments");
+  res.send("Update Services");
 });
 
 router.delete("/:id", (req, res) => {
-  res.send("erase appointments");
+  res.send("Erase Services");
 });
 export default router;

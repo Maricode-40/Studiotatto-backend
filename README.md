@@ -49,7 +49,7 @@ Docker, MySQL , TS, funcionalidad de async/await
 
 ## Diagrama BD
 
-<img src="./img/newDiagramDB.png" alt="DB" />
+<img src="./img/StudioDBmysql.png" alt="DB" />
 
 Registro de usuarios
 
@@ -81,16 +81,19 @@ Este proyecto se encuentra bajo licencia de "Mi Nombre"
 
   - REGISTER
 
-          POST http://localhost:
+          POST http://localhost:3000
 
     body:
 
     ```js
-        {
-            "user": "David",
-            "email": "david@david.com",
-            "password": "princes"
-        }
+       {
+       "id":41
+         "firstName":"Cristiano"
+         "lastName":"Ronaldo"
+         "email":"cronaldino@gmailcom",
+         "password":xx
+
+         }
     ```
 
   - LOGIN
@@ -101,65 +104,21 @@ Este proyecto se encuentra bajo licencia de "Mi Nombre"
 
     ```js
         {
-            "user": "David",
-            "email": "david@david.com",
-            "password": "princes"
+            "id":41
+         "firstName":"Cristiano"
+         "lastName":"Ronaldo"
+         "email":"cronaldino@gmail.com"
+         "password":xx
         }
     ```
 
-- - RECUPERAR RU
+- - DETALLES DEL PERFIL- RUTA
 
-          GET
+          GET   `/api/users/profile`
 
   - ...
 
-### Users (esto remover al fin de semana)
-
-| Método | URI                                        | Acción               | Rol   |
-| ------ | ------------------------------------------ | -------------------- | ----- |
-| GET    | `/api/users/profile`                       | Detalles del perfil  | user  |
-| PUT    | `/api/users/profile`                       | Actualiza perfil     | user  |
-| GET    | `/api/users/appointments`                  | Obtener mis citas    | user  |
-| GET    | `/api/users/services`                      | Obtener servicios    | user  |
-| POST   | `/api/users/appointments`                  | Agregar citas        | user  |
-| DELETE | `/api/users/service/{serviceId}`           | Eliminar mi servicio | user  |
-| DELETE | `/api/users/appointments/{appointmentsId}` | Eliminar mi cita     | user  |
-| POST   | `/api/users`                               | Nuevo usuario        | admin |
-| GET    | `/api/users`                               | Lista de usuarios    | admin |
-| GET    | `/api/users/{id}`                          | Detalles de usuario  | admin |
-| PUT    | `/api/users/{id}`                          | Actualiza usuario    | admin |
-| DELETE | `/api/users/{id}`                          | Elimina usuario      | admin |
-| GET    | `/api/users/{id}/appointments`             | Citas por usuario    | admin |
-| PUT    | `/api/users/{id}/role`                     | Cambiar rol          | admin |
-
-### SERVICES
-
-| Método | URI                  | Acción             | Rol   |
-| ------ | -------------------- | ------------------ | ----- |
-| GET    | `/api/service`       | Lista de servicios | -     |
-| POST   | `/api/service`       | Nuevo servicio     | admin |
-| GET    | `/api/tatuador/{id}` | Detalles tatuador  | -     |
-| PUT    | `/api/tatuador/{id}` | Actualiza tatuador | admin |
-| DELETE | `/api/tatuador/{id}` | Elimina tatuador   | admin |
-
-### APPOINTMENTS
-
-| Método | URI                     | Acción         | Rol   |
-| ------ | ----------------------- | -------------- | ----- |
-| GET    | `/api/appointment`      | Lista de citas | -     |
-| POST   | `/api/appointment`      | Nueva cita     | admin |
-| GET    | `/api/appoitnment/{id}` | Detalles citas | -     |
-| PUT    | `/api/appointment/{id}` | Actualiza cita | admin |
-| DELETE | `/api/appointment/{id}` | Elimina cita   | admin |
-
-### Autenticación
-
-| Método | URI                  | Acción                    |
-| ------ | -------------------- | ------------------------- |
-| POST   | `/api/auth/register` | Registra un nuevo usuario |
-| POST   | `/api/auth/login`    | Iniciar sesión.           |
-
-## Instalación
+## Instalación en local
 
 Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 
@@ -168,6 +127,13 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 3.  Inicia la aplicación: `npm start`
 4.  Instala dependencias `package json` `gitgnore`
     y modulos node: `node modules`
+5.  Conectamos nuestro repositorio con la base de datos -en mi caso utlilize imagenes de Docker -mysql
+
+6.  Ejecutamos las migraciones, seguimos con los Factories y Models y poblamos la DB por medio de los seeders en mi caso he realizado un archivo mysql en workbench por separado.
+7.  Ejecutamos el servidor `npm run dev`
+8.  Comenzamos a definir las rutas en los ficheros routes y el CRUD.
+9.
+10.
 
 ## Webgrafia:
 

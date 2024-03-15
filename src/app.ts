@@ -16,7 +16,7 @@ app.use(cors(corsOptions));
 //register base route
 app.use("/",baseRoutes);
 
-//register api routes
+//register api routes for resources
 app.use("/api", apiRoutes);
 
 

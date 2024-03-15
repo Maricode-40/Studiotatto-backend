@@ -1,10 +1,10 @@
-import express ,{Request, Response}from "express";
+import express, { Request, Response } from "express";
 
 const router = express.Router();
 
 //base route
-router.get("/", (req: Request, res: Response)=> {
-    res.send("Welcome to REST API for Tatto Studio ....")
+router.get("/", (req: Request, res: Response) => {
+  res.send("Welcome to REST API for Tatto Studio ....");
 });
 
 export default router;
