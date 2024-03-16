@@ -24,9 +24,9 @@ Crear un sistema de gestión de citas para un estudio de tatuajes.
 ## Sobre el proyecto-🔎
 
 El cliente deberá ser capaz de registrarse en la aplicación, hacer login y acceder a su área de cliente, todo ello visualmente desde el navegador.
-citas: modificarlas y anularlas.
-Podrá crear citas con tatuadores y cada tatuador tendrá
-un portfolio de tatuajes,
+
+Citas: modificarlas y anularlas. Podrá crear citas con tatuadores y cada tatuador tendrá
+un portfolio de tatuajes (servicios).
 
 También existirá una zona de usuario con sus datos personales, que solo
 podrá ver él mismo.
@@ -127,13 +127,22 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 3.  Inicia la aplicación: `npm start`
 4.  Instala dependencias `package json` `gitgnore`
     y modulos node: `node modules`
-5.  Conectamos nuestro repositorio con la base de datos -en mi caso utlilize imagenes de Docker -mysql
+5.  Conectamos nuestro repositorio con la base de datos -en mi caso utlilize imagenes de Docker -mysql.
 
-6.  Ejecutamos las migraciones, seguimos con los Factories y Models y poblamos la DB por medio de los seeders en mi caso he realizado un archivo mysql en workbench por separado.
+6.  Ejecutamos las migraciones por medio de los archivos Factories y Models (Entity) Poblar la DB por medio de los Seeders. Yo en mi caso he realizado un archivo mysql en workbench por separado.
+
+    <img src="./img/dockermysql.png" />
+
 7.  Ejecutamos el servidor `npm run dev`
-8.  Comenzamos a definir las rutas en los ficheros routes y el CRUD.
-9.  Comenzamos la atenticacion de los usuarios por medio de un token. `JWT`
-10. Por último Añadir middleware de Autorización.
+8.  Comienza a definir cada uno de las endpoints por recurso por medio de los ficheros rutas. (EL CRUD)
+
+9.  Comenzamos la atenticación de los usuarios por medio de un token `JWT` string codificado.
+
+10. Este token contiene toda la información codificada y se genrara por medio de la API con todos los datos y extra información interna.
+
+11. Por último configuramos los middleware de Autorizaciones /ErrorHandler 🎉 y 🎁 listo tienes una API lista para Servir datos.
+
+---
 
 ## Webgrafia:
 
