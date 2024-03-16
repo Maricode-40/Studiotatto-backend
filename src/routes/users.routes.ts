@@ -1,4 +1,6 @@
 import express from "express";
+import { User } from "../models/User";
+import { userController } from "../controllers/userController";
 
 const router = express.Router();
 
@@ -8,7 +10,7 @@ router.get("/profile", (req, res) => {
 });
 
 router.put("/profile", (req, res) => {
-  res.send("put profile");
+  res.send("update profile");
 });
 
 router.get("/appointments", (req, res) => {
@@ -20,7 +22,7 @@ router.get("/services", (req, res) => {
 });
 
 router.post("/appointments", (req, res) => {
-  res.send("post appointments");
+  res.send("New appointmets");
 });
 
 router.delete("/services", (req, res) => {
@@ -32,28 +34,18 @@ router.delete("/appointments", (req, res) => {
 });
 
 //protected routes depend of the role
-router.get("/", (req, res) => {
-  res.send("get users");
-});
+router.post("/", userController.create);
 
-router.get("/:id", (req, res) => {
-  res.send("get user by id ");
-});
+router.get("/", userController.getAll);
 
-router.put("/:id", (req, res) => {
-  res.send("put user by id ");
-});
+router.get("/:id", userController.getById);
 
-router.delete("/:id", (req, res) => {
-  res.send("delete user by id ");
-});
+router.put("/:id", userController.update);
 
-router.get("/:id/appointments", (req, res) => {
-  res.send("get user appointments by user id  ");
-});
+router.delete("/:id", userController.delete);
 
-router.put("/:id/role", (req, res) => {
-  res.send("modify role by user id");
-});
+router.get("/:id/appointments", userController.getUserAppointmentsbyId);
+
+router.put("/:id/role", userController.updateRolebyId);
 
 export default router;
