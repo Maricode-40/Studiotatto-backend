@@ -77,46 +77,45 @@ Este proyecto se encuentra bajo licencia de "Mi Nombre"
 
 # Endpoints principales
 
-- AUTH
+- REGISTER
 
-  - REGISTER
+        POST http://localhost:3000
 
-          POST http://localhost:3000
+  body:
 
-    body:
+  ```js
+     {
+     "id": 70,
+       "firstName":"Cristiano"
+       "lastName":"Ronaldo"
+       "email":"cronaldino@gmailcom",
+       "password":xx
+       "isActive": true,
 
-    ```js
-       {
-       "id":41
-         "firstName":"Cristiano"
-         "lastName":"Ronaldo"
-         "email":"cronaldino@gmailcom",
-         "password":xx
+       }
+  ```
 
-         }
-    ```
+- LOGIN - AUTH
 
-  - LOGIN
+        POST  `/api/auth/login`
 
-          POST
+  body:
 
-    body:
+  ```js
+      {
+          "id":41
+       "firstName":"Cristiano"
+       "lastName":"Ronaldo"
+       "email":"cronaldino@gmail.com"
+       "password":xx
+      }
+  ```
 
-    ```js
-        {
-            "id":41
-         "firstName":"Cristiano"
-         "lastName":"Ronaldo"
-         "email":"cronaldino@gmail.com"
-         "password":xx
-        }
-    ```
+- DETALLES DEL PERFIL- RUTA
 
-- - DETALLES DEL PERFIL- RUTA
+         GET  `/api/users/profile`
 
-          GET   `/api/users/profile`
-
-  - ...
+-
 
 ## Instalación en local
 
@@ -132,8 +131,8 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 6.  Ejecutamos las migraciones, seguimos con los Factories y Models y poblamos la DB por medio de los seeders en mi caso he realizado un archivo mysql en workbench por separado.
 7.  Ejecutamos el servidor `npm run dev`
 8.  Comenzamos a definir las rutas en los ficheros routes y el CRUD.
-9.
-10.
+9.  Comenzamos la atenticacion de los usuarios por medio de un token. `JWT`
+10. Por último Añadir middleware de Autorización.
 
 ## Webgrafia:
 
