@@ -1,11 +1,12 @@
 import express from "express";
 import { userController } from "../controllers/userController";
+import { auth } from "../middlewares/auth";
 
 const router = express.Router();
 
 //users
 router.get("/profile", (req, res) => {
-  res.send("get profile");
+  res.send("get details profile");
 });
 
 router.put("/profile", (req, res) => {
@@ -35,7 +36,7 @@ router.delete("/appointments", (req, res) => {
 //protected routes depend of the role
 router.post("/", userController.create);
 
-router.get("/", userController.getAll);
+router.get("/", auth, userController.getAll);
 
 router.get("/:id", userController.getById);
 

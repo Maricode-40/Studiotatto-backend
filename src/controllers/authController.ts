@@ -3,6 +3,8 @@ import { User } from "../models/User";
 import bcrypt from "bcrypt";
 import { UserRoles } from "../constants/UserRoles";
 import jwt from "jsonwebtoken";
+import { TokenData } from "../types/types";
+
 
 export const authController = {
   async register(req: Request, res: Response): Promise<void> {
@@ -64,7 +66,7 @@ export const authController = {
         return;
       }
 
-      const tokenPayload = {
+      const tokenPayload: TokenData = {
         userId: user.id,
         userRole: user.role.name,
       };
