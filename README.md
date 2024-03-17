@@ -60,14 +60,6 @@ Registro de usuarios
 
 ● Modificación de datos del perfil
 
-● Creación de citas
-
-● Editar citas
-
-● Eliminación de citas
-
-● Ver todas las citas que tengo como cliente (solo las propias)
-
 ● Ver todas las citas existentes (role tatuador).
 
 ● Listar tatuadores

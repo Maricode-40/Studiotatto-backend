@@ -1,21 +1,16 @@
 import express from "express";
 import { userController } from "../controllers/userController";
 import { auth } from "../middlewares/auth";
+import { authorize } from "../middlewares/authorize";
 
 const router = express.Router();
 
 //users
-router.get("/profile", (req, res) => {
-  res.send("get details profile");
-});
+router.get("/profile", auth, userController.getProfile);
 
-router.put("/profile", (req, res) => {
-  res.send("update profile");
-});
+router.put("/profile", auth, userController.updateProfile);
 
-router.get("/appointments", (req, res) => {
-  res.send("get appointments");
-});
+router.get("/appointments", auth, userController.getUserAppointments);
 
 router.get("/services", (req, res) => {
   res.send("get services");
@@ -36,7 +31,7 @@ router.delete("/appointments", (req, res) => {
 //protected routes depend of the role
 router.post("/", userController.create);
 
-router.get("/", auth, userController.getAll);
+router.get("/", auth, authorize(["superadmin"]), userController.getAll);
 
 router.get("/:id", userController.getById);
 

@@ -210,4 +210,90 @@ export const userController = {
       res.status(500).json({ message: "Failed to update the role by id" });
     }
   },
+
+  ///user routes
+  async getProfile(req: Request, res: Response): Promise<void> {
+    try {
+      const userId = req.tokenData.userId;
+
+      const user = await User.findOne({
+        relations: {
+          role: true,
+        },
+        where: { id: userId },
+      });
+
+      res.json(user);
+    } catch (error) {
+      res.status(500).json({
+        message: "Failed to retrieve user",
+      });
+    }
+  },
+
+  async updateProfile(
+    req: Request<{}, {}, Partial<User>, {}>,
+    res: Response
+  ): Promise<void> {
+    //para tipar el Request<Params, Response, Body, Query>,
+    try {
+      const userId = req.tokenData.userId;
+
+      const { password, role, ...resUserData } = req.body;
+
+      const userToUpdate = await User.findOne({
+        where: { id: userId },
+      });
+
+      if (password) {
+        const hashedPassword = bcrypt.hashSync(password, 10);
+        userToUpdate!.password = hashedPassword;
+      }
+
+      const updatedUser: Partial<User> = {
+        ...userToUpdate,
+        ...resUserData,
+      };
+
+      await User.save(updatedUser);
+
+      res.status(202).json({ message: "User updated successfully" });
+    } catch (error) {
+      res.status(500).json({
+        message: "Failed to update user",
+      });
+    }
+  },
+
+  async getUserAppointments(req: Request, res: Response): Promise<void> {
+    try {
+      const userId = req.tokenData.userId;
+
+      const user = await User.findOne({
+        select: {
+          appointments: {
+            id: true,
+            appointmentDate: true,
+          },
+        },
+        where: {
+          id: userId,
+        },
+      });
+
+      const getUserAppointments = user!.appointments;
+      if (getUserAppointments?.length === 0) {
+        res.status(404).json({ message: "appoi¡ntment not found" });
+        return;
+      }
+
+      res.status(200).json(getUserAppointments);
+    } catch (error) {
+      res.status(500).json({
+        message: "Failed to retreive appointments from user",
+      });
+    }
+  },
+
+  
 };
