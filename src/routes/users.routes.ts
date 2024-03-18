@@ -33,14 +33,24 @@ router.post("/", userController.create);
 
 router.get("/", auth, authorize(["superadmin"]), userController.getAll);
 
-router.get("/:id", userController.getById);
+router.get("/:id", auth, authorize(["superadmin"]), userController.getById);
 
-router.put("/:id", userController.update);
+router.put("/:id", auth, authorize(["superadmin"]), userController.update);
 
-router.delete("/:id", userController.delete);
+router.delete("/:id", auth, authorize(["superadmin"]), userController.delete);
 
-router.get("/:id/appointments", userController.getUserAppointmentsbyId);
+router.get(
+  "/:id/appointments",
+  auth,
+  authorize(["superadmin"]),
+  userController.getUserAppointmentsbyId
+);
 
-router.put("/:id/role", userController.updateRolebyId);
+router.put(
+  "/:id/role",
+  auth,
+  authorize(["superadmin"]),
+  userController.updateRolebyId
+);
 
 export default router;

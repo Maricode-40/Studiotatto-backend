@@ -33,12 +33,14 @@ podrá ver él mismo.
 
 ## Stack 🚀 🚀
 
+lenguaje principal - Typescript
+
 MySQL ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 JavaScript ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 🛠️ TypeORM, ES6 Javascript, API REST
-Docker, MySQL , TS, funcionalidad de async/await
+Docker, MySQL , funcionalidad de async/await
 
 <a href="https://www.expressjs.com/">
     <img src= "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"/>
