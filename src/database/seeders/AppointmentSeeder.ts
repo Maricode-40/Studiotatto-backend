@@ -3,6 +3,7 @@ import { getRandomValueFromArray } from "../../helpers/common";
 import { Appointment } from "../../models/Appointment";
 import { Service } from "../../models/Service";
 import { User } from "../../models/User";
+import { AppointmentFactory } from "../factories/Appointment";
 import { Seeder } from "./Seeder";
 
 export class AppointmentSeeder extends Seeder {
@@ -12,15 +13,9 @@ export class AppointmentSeeder extends Seeder {
     const services = await Service.find();
     const users = await User.find();
 
-    const appointments: Partial<Appointment>[] = [
-      { appointmentDate: new Date("2024-10-15") },
-      { appointmentDate: new Date("2024-10-16") },
-      { appointmentDate: new Date("2024-10-17") },
-      { appointmentDate: new Date("2024-10-18") },
-      { appointmentDate: new Date("2024-10-19") },
-      { appointmentDate: new Date("2024-10-20") },
-    ];
-
+    const appointments = new AppointmentFactory().createMany(
+      APPOINTMENTS_PER_USER
+    );
     appointments.forEach((appointment) => {
       appointment.service = getRandomValueFromArray(services);
       appointment.user = getRandomValueFromArray(users);

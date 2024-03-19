@@ -29,7 +29,7 @@ router.delete("/appointments", (req, res) => {
 });
 
 //protected routes depend of the role
-router.post("/", userController.create);
+router.post("/", auth, authorize(["superadmin"]), userController.create);
 
 router.get("/", auth, authorize(["superadmin"]), userController.getAll);
 
