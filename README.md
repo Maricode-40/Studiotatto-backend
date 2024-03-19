@@ -26,21 +26,22 @@ Crear un sistema de gestión de citas para un estudio de tatuajes.
 El cliente deberá ser capaz de registrarse en la aplicación, hacer login y acceder a su área de cliente, todo ello visualmente desde el navegador.
 
 Citas: modificarlas y anularlas. Podrá crear citas con tatuadores y cada tatuador tendrá
-un portfolio de tatuajes (servicios).
+un portfolio de tatuajes (servicios)
 
 También existirá una zona de usuario con sus datos personales, que solo
 podrá ver él mismo.
 
 ## Stack 🚀 🚀
 
-lenguaje principal - Typescript
+lenguaje principal - TYPESCRIPT
+
+🛠️ TypeORM, API REST
+Docker -imagenes MySQL ,
+Funcionalidad de async/await.
 
 MySQL ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 JavaScript ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-🛠️ TypeORM, ES6 Javascript, API REST
-Docker, MySQL , funcionalidad de async/await
 
 <a href="https://www.expressjs.com/">
     <img src= "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"/>
@@ -74,7 +75,7 @@ Este proyecto se encuentra bajo licencia de "Mi Nombre"
 
 - REGISTER
 
-        POST http://localhost:3000
+        POST  ` /api/auth/register`
 
   body:
 
@@ -110,7 +111,9 @@ Este proyecto se encuentra bajo licencia de "Mi Nombre"
 
          GET  `/api/users/profile`
 
--
+- DETALLES DEL PERFIL POR ID
+
+        GET `/api/users/25`
 
 ## Instalación en local
 
