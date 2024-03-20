@@ -25,15 +25,14 @@ Crear un sistema de gestión de citas para un estudio de tatuajes.
 
 El cliente deberá ser capaz de registrarse en la aplicación, hacer login y acceder a su área de cliente, todo ello visualmente desde el navegador.
 
-Citas: modificarlas y anularlas. Podrá crear citas con tatuadores y cada tatuador tendrá
-un portfolio de tatuajes (servicios)
-
+Citas: modificarlas y anularlas. Podrá crear citas con tatuadores.
+En servicios encontrarás un portfolio de tatuajes ó servicios.  
 También existirá una zona de usuario con sus datos personales, que solo
 podrá ver él mismo.
 
 ## Stack 🚀 🚀
 
-lenguaje principal - TYPESCRIPT
+El lenguaje principal: TYPESCRIPT
 
 🛠️ TypeORM, API REST
 Docker -imagenes MySQL ,
@@ -63,9 +62,9 @@ Registro de usuarios
 
 ● Modificación de datos del perfil
 
-● Ver todas las citas existentes (role tatuador).
+● Ver todas las citas existentes
 
-● Listar tatuadores
+● Elimiar citas o Agregar citas (appointment)
 
 ## Licencia
 
