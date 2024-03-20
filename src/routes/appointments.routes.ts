@@ -1,30 +1,31 @@
 import express from "express";
 import { userController } from "../controllers/userController";
+import { appointmentController } from "../controllers/appointmentController";
+import { auth } from "../middlewares/auth";
+import { authorize } from "../middlewares/authorize";
 
 const router = express.Router();
 
-//  user routes 
-router.post("/",  (req, res) => {
-  res.send( "New Appointment")
-});
-router.put("/:id", (req, res) => {
-  res.send("update appointments");
-});
+//  User routes
+//New Appointment
+router.post("/", auth, appointmentController.create);
 
-router.delete("/:id", (req, res) => {
-  res.send("erase appointments");
-});
+//update appointments
+router.put("/:id", auth, appointmentController.update);
 
+//erase appointments
+router.delete("/:id", auth, appointmentController.delete);
 
 //protected routes
+//get appointment list
+router.get("/", auth, authorize(["superadmin"]), appointmentController.getAll);
 
-router.get("/", (req, res) => {
-  res.send("get appointment list");
-});
-
-router.get("/:id", (req, res) => {
-  res.send("get details of appointment date");
-});
-
+//get details of appointment date- BY ID
+router.get(
+  "/:id",
+  auth,
+  authorize(["superadmin"]),
+  appointmentController.getAll
+);
 
 export default router;
