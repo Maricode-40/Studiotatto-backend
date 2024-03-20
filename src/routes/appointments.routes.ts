@@ -1,5 +1,4 @@
 import express from "express";
-import { userController } from "../controllers/userController";
 import { appointmentController } from "../controllers/appointmentController";
 import { auth } from "../middlewares/auth";
 import { authorize } from "../middlewares/authorize";
