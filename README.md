@@ -122,7 +122,18 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 2.  Instala las dependencias: `npm install`
 3.  Inicia la aplicación: `npm start`
 4.  Instala dependencias `package json` `gitgnore`
-    y modulos node: `node modules`
+    y modulos adicionales: `node modules`
+    `npm i cors`
+    `npm i -D @types/cors`
+    `npm i -D nodemon`
+    `npm i -D ts-node`
+    `npm i bcrypt`
+    `npm i -D @types/bcrypt`
+    `npm i @faker-js/faker`
+    `npm i jsonwebtoken`
+    `npm i -D @types/jsonwebtoken`
+    `npm i dotenv`
+    `npm i typeorm reflect-metadata mysql2`
 5.  Conectamos nuestro repositorio con la base de datos -en mi caso utlilize imagenes de Docker -mysql.
 
 6.  Ejecutamos las migraciones por medio de los archivos Factories y Models (Entity) Poblar la DB por medio de los Seeders. Yo en mi caso he realizado un archivo mysql en workbench por separado.
