@@ -134,7 +134,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
     `npm i -D @types/jsonwebtoken`
     `npm i dotenv`
     `npm i typeorm reflect-metadata mysql2`
-5.  Conectamos nuestro repositorio con la base de datos -en mi caso utlilize imagenes de Docker -mysql.
+5.  Conectamos nuestro repositorio con la base de datos -en mi caso he utlilizado imagenes de Docker -mysql.
 
 6.  Ejecutamos las migraciones por medio de los archivos Factories y Models (Entity) Poblar la DB por medio de los Seeders. Yo en mi caso he realizado un archivo mysql en workbench por separado.
 
