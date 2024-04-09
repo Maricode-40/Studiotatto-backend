@@ -5,7 +5,6 @@ import { UserRoles } from "../constants/UserRoles";
 import jwt from "jsonwebtoken";
 import { TokenData } from "../types/types";
 
-
 export const authController = {
   async register(req: Request, res: Response): Promise<void> {
     try {
@@ -51,8 +50,10 @@ export const authController = {
       }
 
       const user = await User.findOne({
-        relations: { role: true },
         select: { id: true, email: true, password: true },
+        relations: {
+          role: true,
+        },
         where: { email: email },
       });
       if (!user) {
