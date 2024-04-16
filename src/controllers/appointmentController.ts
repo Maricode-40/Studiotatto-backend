@@ -1,9 +1,6 @@
 import { Request, Response } from "express";
 import { Appointment } from "../models/Appointment";
 
-
-
-
 export const appointmentController = {
   //Create appointments
 
