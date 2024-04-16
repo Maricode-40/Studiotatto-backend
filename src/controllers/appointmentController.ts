@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { Appointment } from "../models/Appointment";  
-import { AppointmentSeeder } from "../database/seeders/AppointmentSeeder";
+import { Appointment } from "../models/Appointment";
 
-//---------------------------------------------------------------------------
+
+
 
 export const appointmentController = {
-  //Create appointments 
+  //Create appointments
 
   async create(req: Request, res: Response): Promise<void> {
     try {
@@ -101,7 +101,9 @@ export const appointmentController = {
       const dateId = Number(req.params.id);
       const { ...resDatesData } = req.body;
 
-      const appointmentToUpdate = await Appointment.findOne({ where: { id: dateId } });
+      const appointmentToUpdate = await Appointment.findOne({
+        where: { id: dateId },
+      });
       if (!appointmentToUpdate) {
         res.status(404).json({ message: "appointment not found" });
         return;
