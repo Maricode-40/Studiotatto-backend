@@ -131,16 +131,16 @@ export const appointmentController = {
       const deleteResult = await Appointment.delete(DateId);
 
       if (deleteResult.affected === 0) {
-        res.status(404).json({ message: "Date not delete" });
+        res.status(404).json({ message: "Appointment not delete" });
         return;
       }
 
       res.status(200).json({
-        message: "Date deleted successfully",
+        message: "appointment deleted successfully",
       });
     } catch (error) {
       res.status(500).json({
-        message: "Failed to delete date",
+        message: "Failed to delete appointment",
       });
     }
   },
