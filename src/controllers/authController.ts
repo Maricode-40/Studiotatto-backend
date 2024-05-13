@@ -56,7 +56,7 @@ export const authController = {
         },
         where: { email: email },
       });
-    
+
       if (!user) {
         res.status(400).json({ message: "Bad credentials" });
         return;
