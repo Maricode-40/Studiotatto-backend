@@ -23,7 +23,7 @@ router.get("/", auth, authorize(["superadmin"]), appointmentController.getAll);
 router.get(
   "/:id",
   auth,
-  authorize(["superadmin"]),
+  //authorize(["superadmin"]),
   appointmentController.getAll
 );
 

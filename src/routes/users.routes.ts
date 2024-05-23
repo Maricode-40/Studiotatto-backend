@@ -42,7 +42,7 @@ router.delete("/:id", auth, authorize(["superadmin"]), userController.delete);
 router.get(
   "/:id/appointments",
   auth,
-  authorize(["superadmin"]),
+  //authorize(["superadmin"]),
   userController.getUserAppointmentsbyId
 );
 

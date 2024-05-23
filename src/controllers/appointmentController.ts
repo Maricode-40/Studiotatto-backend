@@ -5,6 +5,8 @@ export const appointmentController = {
   //Create appointments
 
   async create(req: Request, res: Response): Promise<void> {
+   // console.log("hola");
+
     try {
       const { appointmentDate, userId, serviceId } = req.body;
 
@@ -36,6 +38,8 @@ export const appointmentController = {
 
   async getAll(req: Request, res: Response): Promise<void> {
     try {
+      console.log("getall");
+
       const page = Number(req.query.page) || 1;
       const limit = Number(req.query.limit) || 250;
 
@@ -47,7 +51,8 @@ export const appointmentController = {
           serviceId: true,
         },
       });
-      if (Appointment.length === 0) {
+
+      if (appointments.length === 0) {
         res.status(404).json({
           message: "Dates not found",
         });
